@@ -1,0 +1,4 @@
+test/API.class
+test/Application.class
+test/JavaFeignClient.class
+test/PythonFeignClient.class
