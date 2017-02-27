@@ -15,13 +15,16 @@ The TestHarness project can be used to simulate the issues. You can use the foll
 
  - TEST forwarding request to the standard Java Service (Works as expected)
     - http://localhost:${port}/testJavaService?message=Hello%20World
+    
  - TEST forwarding request to the Sidecar Service, which should in trun forward to the python application (Content is lost)
     - http://localhost:${port}/testPythonService1?message=Hello%20World
+    
 - TEST forwarding request to the Sidecar Service, which should in trun forward to the python application (Content is lost)
     - http://localhost:${port}/testPythonService2?message=Hello%20World
+    
 - TEST forwarding request to the Sidecar Service, which should in trun forward to the python application (Content is lost)
     - http://localhost:${port}/testPythonService3?message=Hello%20World
 
 ### Additional Info 
 - The sidecar application runs on port 8000, to test the server send a JSON message to http://localhost:8000/echo this should retrun the JSON message 
-- We provide additional pom-${version}.xml files for previous releases of Spring Cloud, this issue is not present when running all the services with the 1.0.2.RELEASE version. To test this use the URL http://localhost:${server.port}/testPythonService1?message=Hello%20World
+- We provide additional pom-${version}.xml files for previous releases of Spring Cloud, this issue is not present when running ALL the services with the 1.0.2.RELEASE version. Works as expected when hitting the URL http://localhost:${server.port}/testPythonService1?message=Hello%20World
