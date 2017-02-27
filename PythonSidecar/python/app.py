@@ -6,18 +6,20 @@ app = Flask(__name__)
 @app.route('/echo', methods=['POST'])
 def testPostReqeust():
     #print request headers
-    print "request heders="+str(request.headers)
+    print "request headers="+str(request.headers)
     #request.data - Contains the incoming request data
     print "request.data="+str(request.data)
     #request.form  -A MultiDict with the parsed form data from POST or PUT requests
     print "request.form="+str(request.form)
     #Parses the incoming JSON request data and returns it
     if len(request.data) :
-    	return "h"
+    	return request.data
     else :
-    	return "Empty request data"
+        return "EMPTY REQUEST DATA!!"
 
 
+ 
+#USE THIS ENDPOINT TO VIEW THE HEALTH OF THE APPLICATION SITTING BEHIND THE SIDECAR, http://${sidecar.host}/8000/health 
 @app.route('/health', methods=['GET'])
 def testGet():
     status = {"status":"UP"}
