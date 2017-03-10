@@ -1,4 +1,4 @@
-# Issue Description - Sidecar not Forwarding POST Requests
+# FIXED: 1.2.6.RELEASE -- Issue Description - Sidecar not Forwarding POST Requests
 
 The following set of projects demonstrate how the Sidecar is not able to forward a POST request payload even though headers are configured for respective feign client.
 
